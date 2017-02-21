@@ -157,7 +157,10 @@ spawnl(const char *prog, const char *arg0, ...)
 	va_list vl;
 	va_start(vl, arg0);
 	while(va_arg(vl, void *) != NULL)
+	{
 		argc++;
+	}	
+		
 	va_end(vl);
 
 	// Now that we have the size of the args, do a second pass
@@ -301,6 +304,21 @@ static int
 copy_shared_pages(envid_t child)
 {
 	// LAB 5: Your code here.
+	unsigned va = 0;
+	int r=0;
+
+	for(va =0;va < USTACKTOP; va += PGSIZE)
+	{
+		if((uvpd[PDX(va)]& PTE_P) && (uvpt[PGNUM(va)]& PTE_P) && (uvpt[PGNUM(va)]& PTE_U) && (uvpt[PGNUM(va)]& PTE_SHARE))
+		{
+			r = sys_page_map(0,(void*)va,child ,(void*)va , uvpt[PGNUM(va)]&PTE_SYSCALL);
+			if(r<0)
+				panic("copy_shared_pages:sys_page_map");
+		}
+
+	}
+
 	return 0;
+	//return 0;
 }
 
