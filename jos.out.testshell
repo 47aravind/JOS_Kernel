@@ -1,0 +1,154 @@
++ ld obj/kern/kernel
++ mk obj/kern/kernel.img
+6828 decimal is XXX octal!
+Physical memory: 64M available, base = 640K, extended = 63M
+ check_page_free_list() succeeded 
+check_page_alloc(void) succedeed 
+check_page() succeeded!
+check_kern_pgdir() succeeded!
+ check_page_free_list() succeeded 
+check_page_installed_pgdir() succeeded!
+
+
+SMP: CPU 0 found 1 CPU(s)
+enabled interrupts: 1 2 4
+FS is running
+FS can do I/O
+Device 1 presence: 1
+block cache is good
+superblock is good
+bitmap is good
+alloc_block is good
+r in dir walk is -11
+file_open is good
+file_get_block is good
+file_flush is good
+file_truncate is good
+file rewrite is good
+running sh -x < testshell.sh | cat
+ we are exiting by destroying the env:: lib/exit.c
+
+
+[00001006] exiting gracefully
+ we are exiting by destroying the env:: lib/exit.c
+
+
+[00001007] exiting gracefully
+ we are exiting by destroying the env:: lib/exit.c
+
+
+[00001005] exiting gracefully
+ we are exiting by destroying the env:: lib/exit.c
+
+
+[00001004] exiting gracefully
+ we are exiting by destroying the env:: lib/exit.c
+
+
+[00002005] exiting gracefully
+ we are exiting by destroying the env:: lib/exit.c
+
+
+[00002004] exiting gracefully
+ we are exiting by destroying the env:: lib/exit.c
+
+
+[00002007] exiting gracefully
+ we are exiting by destroying the env:: lib/exit.c
+
+
+[00002006] exiting gracefully
+ we are exiting by destroying the env:: lib/exit.c
+
+
+[00003005] exiting gracefully
+ we are exiting by destroying the env:: lib/exit.c
+
+
+[00003004] exiting gracefully
+ we are exiting by destroying the env:: lib/exit.c
+
+
+[00003006] exiting gracefully
+ we are exiting by destroying the env:: lib/exit.c
+
+
+[0000100b] exiting gracefully
+ we are exiting by destroying the env:: lib/exit.c
+
+
+[0000100c] exiting gracefully
+ we are exiting by destroying the env:: lib/exit.c
+
+
+[0000100e] exiting gracefully
+ we are exiting by destroying the env:: lib/exit.c
+
+
+[0000100d] exiting gracefully
+ we are exiting by destroying the env:: lib/exit.c
+
+
+[0000100f] exiting gracefully
+ we are exiting by destroying the env:: lib/exit.c
+
+
+[0000100a] exiting gracefully
+ we are exiting by destroying the env:: lib/exit.c
+
+
+[00001009] exiting gracefully
+ we are exiting by destroying the env:: lib/exit.c
+
+
+[00001008] exiting gracefully
+ we are exiting by destroying the env:: lib/exit.c
+
+
+[00003007] exiting gracefully
+ we are exiting by destroying the env:: lib/exit.c
+
+
+[00004005] exiting gracefully
+ we are exiting by destroying the env:: lib/exit.c
+
+
+[00004004] exiting gracefully
+ we are exiting by destroying the env:: lib/exit.c
+
+
+[00005005] exiting gracefully
+ we are exiting by destroying the env:: lib/exit.c
+
+
+[00005004] exiting gracefully
+ we are exiting by destroying the env:: lib/exit.c
+
+
+[00006005] exiting gracefully
+ we are exiting by destroying the env:: lib/exit.c
+
+
+[00006004] exiting gracefully
+[00007004] user panic in sh at user/sh.c:58: < redirection not implemented
+Welcome to the JOS kernel monitor!
+Type 'help' for a list of commands.
+TRAP frame at 0xf02711f0 from CPU 0
+  edi  0x00000000
+  esi  0xeebfdffa
+  ebp  0xeebfdaec
+  oesp 0xefffffdc
+  ebx  0xeebfdb00
+  edx  0xeebfd994
+  ecx  0x00000001
+  eax  0x00000001
+  es   0x----0023
+  ds   0x----0023
+  trap 0x00000003 Breakpoint
+  err  0x00000000
+  eip  0x00800a87
+  cs   0x----001b
+  flag 0x00000296
+  esp  0xeebfdac4
+  ss   0x----0023
+K> qemu: terminating on signal 15 from pid 9668
